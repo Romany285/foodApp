@@ -1,0 +1,15 @@
+section{
+  background-color: #e9e7e7b0;
+  border-radius: 16px;
+  .searchInput{
+    padding: 4px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid #fff 1px;
+    ::placeholder{
+      color: rgba(131, 129, 129, 0.795);
+      
+    }
+  }
+}

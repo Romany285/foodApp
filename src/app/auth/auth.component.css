@@ -1,0 +1,48 @@
+section {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4941176471), rgba(0, 0, 0, 0.4941176471)), url("../../../src/assets/image/image 1.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-color {
+  color: #4AA35A;
+}
+
+.dark-gray {
+  color: #3A3A3D;
+}
+
+.light-gray {
+  color: rgba(73, 73, 73, 0.6);
+}
+
+.auth-form {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 2rem 3rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+}
+button.btn-main {
+  background-color: #4AA35A;
+  color: #fff;
+}
+button.btn-main:hover {
+  opacity: 0.8;
+}
+button.btn-main .btn-gray {
+  background-color: #3A3A3D;
+}
+
+button:disabled {
+  background-color: #94e6a3;
+}/*# sourceMappingURL=auth.component.css.map */
