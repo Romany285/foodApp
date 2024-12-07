@@ -1,0 +1,27 @@
+<section>
+  <div class="container my-3">
+    <div class="row justify-content-end">
+      <div class="col-8">
+        <input type="text" class="searchInput ps-3" placeholder="Search Here">
+      </div>
+      <div class="col-4">
+        <div class="dropdown text-end ">
+          <button class="btn   dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="image"><img  [src]="imgSrc" alt=""></span>
+            <span class="mx-3">  {{userName}} </span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/dashboard/Profile">
+              <span><i class="fa-solid fa-user"></i></span>
+              Profile</a></li>
+            <li><a (click)="openDialog()" class="dropdown-item"  >
+              <span><i class="fa-solid fa-lock"></i></span>
+              change Password</a></li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

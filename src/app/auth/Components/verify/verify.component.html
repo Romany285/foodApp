@@ -1,0 +1,33 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 m-auto">
+        <div class="auth-form">
+          <div class="logo text-center">
+            <img src="../../assets/image/logo.svg" alt="">
+          </div>
+          <h2 class="dark-gray"> Verify Account</h2>
+          <p class="light-gray">Please Enter Your Otp  or Check Your Inbox</p>
+          <form (ngSubmit)="handleForm()" [formGroup]="loginForm">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-envelope"></i></span>
+              <input #emailInput type="email" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1" formControlName="email">
+            </div>
+            <div class="alert alert-danger p-1 font-md" *ngIf="loginForm.get('email')?.errors &&( loginForm.get('email')?.touched || emailInput.value.length > 0)">
+              <p class="mb-0 p-1" *ngIf="loginForm.get('email')?.getError('required')">Email is Required</p>
+              <p class="mb-0 p-1" *ngIf="loginForm.get('email')?.getError('email')">Email invalid</p>
+          </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+              <input type="text" class="form-control" placeholder="OTP" aria-label="code" aria-describedby="basic-addon1" formControlName="code">
+            </div>
+            <button [disabled]="loginForm.invalid" class="btn-main w-100">
+              <span *ngIf="isLoading"><i class="fas fa-spin fa-spinner"></i></span>
+              Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

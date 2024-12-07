@@ -1,0 +1,60 @@
+<section>
+  <div class="container">
+    <div class="row text">
+      <div class="col-8">
+        <h3>Edit the <span class="recipe">Recipes !</span></h3>
+      <p class="light-gray">you can now fill the meals easily using the table and form ,<br> click here and sill it with the table !</p>
+      </div>
+      <div class="col-4 text-end ">
+        <button class="btn-main w-75 m-4" routerLink="/dashboard/admin/recipes">
+          All Recipes
+          <span><i class="fa-solid fa-arrow-right"></i></span>
+          </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9 mx-auto">
+        <form class="example-form row" [formGroup]="recipeForm" (ngSubmit)="sendData(recipeForm)">
+          <div class="col-12">
+            <mat-form-field class="example-full-width w-100 rounded-3 overflow-hidden">
+              <mat-label>Recipe Name</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="Sushi" formControlName="name">
+            </mat-form-field>
+          </div>
+          <div  class="col-12">
+            <mat-form-field class="w-100 rounded-3 overflow-hidden">
+              <mat-label>Tag</mat-label>
+              <mat-select formControlName="tagId">
+                <mat-option *ngFor="let item of listTags" [value]="item.id">{{item.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div  class="col-6">
+            <mat-form-field class="example-full-width w-100 rounded-3 overflow-hidden">
+              <mat-label>Price</mat-label>
+              <input matInput placeholder="Ex. 100EGP" type="number" value="Sushi" formControlName="price">
+            </mat-form-field>
+          </div>
+          <div  class="col-6">
+            <mat-form-field class="w-100 rounded-3 overflow-hidden">
+              <mat-label>Category</mat-label>
+              <mat-select formControlName="categoriesIds" multiple>
+                <mat-option *ngFor="let item of listCategory" [value]="item.id">{{item.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div  class="col-12">
+            <mat-form-field class="example-full-width w-100 rounded-3 overflow-hidden">
+              <mat-label>Leave a comment</mat-label>
+              <textarea matInput placeholder="Ex. It makes me feel..." formControlName="description"></textarea>
+            </mat-form-field>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" routerLink="../" class=" btn btn-outline-success mx-3">Close</button>
+            <button type="submit" class="btn-main">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

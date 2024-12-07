@@ -1,0 +1,20 @@
+<div class="card mb-3 border-0 col-8  w-100 " >
+  <div class="row  py-5 p-3 w-100">
+    <div class="col-md-5  mx-auto"  >
+      <div class="w-75 m-auto align-items-center">
+        <img [src]="data.img" height="170px" onerror="this.src='assets/image/668download.webp'" class="w-100 rounded-3" alt="...">
+      </div>
+    </div>
+    <div class="col-md-7 d-flex align-items-center ">
+      <div>
+        <ul class="ps-0">
+          <li><span class="fs-5">Name :</span>  {{ data.name }}</li>
+          <li> <span class="fs-5">Price :</span>   {{ data.price }}</li>
+          <li> <span class="fs-5">Tag :</span>  {{ data.tag.name }}</li>
+        </ul>
+        <p>Creation date: {{ data.creation | date : "dd/MM/yyyy" }}</p>
+        <p>Modification date: {{ data.modification | date : "dd/MM/yyyy" }}</p>
+      </div>
+    </div>
+  </div>
+</div>
